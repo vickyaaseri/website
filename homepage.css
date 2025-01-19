@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #800080;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    color: white;
+    font-size: 28px;
+    font-family: 'Georgia', serif;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero {
+    background-image: url('backgroung.png.png');
+    background-size: cover;
+    background-position: center;
+    color: rgb(127, 40, 203);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: rgb(246, 239, 239);
+}
+/* Hero Slideshow */
+.hero-slideshow {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slideshow::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.hero-slideshow .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.hero-slideshow .hero-text h2 {
+    font-size: 48px;
+    font-family: 'Georgia', serif;
+}
+
+.hero-slideshow .hero-text p {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.hero-slideshow .shop-now {
+    background-color: gold;
+    padding: 15px 30px;
+    color: #800080;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Hero Slideshow Animations */
+.hero-slideshow {
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 15s infinite;
+}
+
+@keyframes slideshow {
+    0% { background-image: url('jutti\ 4.png'); }
+    33% { background-image: url('jutti\ 4.png'); }
+    66% { background-image: url('jutti\ 4.png'); }
+    100% { background-image: url('jutti\ 4.png'); }
+}
+.shop-now {
+    background-color: rgb(255, 215, 0);
+    color: #800080;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.featured-products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 36px;
+    font-family: 'Georgia', serif;
+    margin-bottom: 30px;
+    color: #800080;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.product img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.product a {
+    color: #800080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #800080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+<style>
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    .modal .close {
+        float: right;
+        cursor: pointer;
+        font-size: 20px;
+        color: #333;
+    }
+    .modal-content {
+        text-align: center;
+    }
+</style>
